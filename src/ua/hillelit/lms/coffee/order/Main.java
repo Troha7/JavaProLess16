@@ -4,17 +4,18 @@ public class Main {
 
   public static void main(String[] args) {
 
-    CoffeeOrderBoard.add(new Order(34, "John Snow"));
-    CoffeeOrderBoard.add(new Order(33, "Obi-van"));
-    CoffeeOrderBoard.add(new Order(14, "Alen"));
-    CoffeeOrderBoard.add(new Order(27, "Yoda"));
-    CoffeeOrderBoard.add(new Order(19, "Darth Vader"));
+    CoffeeOrderBoard orderBoard = new CoffeeOrderBoard();
+    orderBoard.add(new Order(34, "John Snow"));
+    orderBoard.add(new Order(33, "Obi-van"));
+    orderBoard.add(new Order(14, "Alen"));
+    orderBoard.add(new Order(27, "Yoda"));
+    orderBoard.add(new Order(19, "Darth Vader"));
 
-    CoffeeOrderBoard.deliver();
+    orderBoard.deliver();
 
-    CoffeeOrderBoard.deliver(34);
+    orderBoard.deliver(34);
 
-    CoffeeOrderBoard.draw();
+    orderBoard.draw();
 
   }
 

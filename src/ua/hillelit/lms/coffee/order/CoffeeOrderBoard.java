@@ -6,9 +6,9 @@ import java.util.List;
 
 public class CoffeeOrderBoard {
 
-  private static final List<Order> orderList = new ArrayList<>();
+  private final List<Order> orderList = new ArrayList<>();
 
-  public static void add(Order order) {
+  public void add(Order order) {
     if (orderList.contains(order) || order.getNum() == null) {
       throw new IllegalArgumentException("Invalid input Order num!");
     }
@@ -20,11 +20,11 @@ public class CoffeeOrderBoard {
     Collections.sort(orderList);
   }
 
-  public static void deliver() {
+  public void deliver() {
     orderList.remove(0);
   }
 
-  public static void deliver(Integer num) {
+  public void deliver(Integer num) {
     for (Order order : orderList) {
       if (order.getNum().equals(num)) {
         orderList.remove(order);
@@ -33,7 +33,7 @@ public class CoffeeOrderBoard {
     }
   }
 
-  public static void draw() {
+  public void draw() {
     String title = "Num | Name\n";
     StringBuilder orderValues = new StringBuilder();
 
